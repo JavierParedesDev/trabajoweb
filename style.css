@@ -68,6 +68,18 @@ header{
     display: flex;
     align-items: center;
     font-size: 13px;
+    text-align: center;
+    padding: 5px;
+    transition: all .5s;
+
+    &:hover{
+        background-color: #00ff62;
+        border-radius: 5px;
+        color: #2c007e;
+        transform: scale(1.1);
+        box-shadow: 0 0 10px #00ff62;
+        cursor: pointer;
+    }
 }
 .user-actions i{
     font-size: 20px;
@@ -75,10 +87,16 @@ header{
     margin-left: 5px;
 }
 .seach{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+}
+.seach .seach-buscar{
     display: flex;
-    align-items: flex-end;
-    width: 50%;
-    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+    overflow: hidden;
 }
 @MEDIA (min-width: 768px){
     .seach-2{
@@ -104,7 +122,7 @@ header{
         background-color: #8400ff;
     }
 }
-.seach input{
+.seach .seach-buscar input{
     border-radius: 5px;
     border: 2px solid #8400ff;
     width: 100%;
@@ -112,19 +130,20 @@ header{
     margin-right: 5px;
 
 }
-.seach input:focus{
+.seach .seach-buscar input:focus{
     outline: none;
     border: 2px solid #2c007e;
 }
-.seach button{
+.seach .seach-buscar button{
     background-color: #fff;
     border: none;
     color: #8400ff;
     cursor: pointer;
     padding: 10px;
-   
     border-radius: 5px;
     margin-right: 5px;
+    transition: all .5s;
+    margin-bottom: 10px;
 
     &:hover{
         background-color: #8400ff;
@@ -183,6 +202,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 10px;
     margin: 0;
     background-color: #eeeeee;
@@ -238,6 +258,8 @@ nav ul li a:hover {
     padding: 0;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Encode Sans SC", sans-serif;
 
 }
 .producto-titulo h1{
@@ -246,6 +268,7 @@ nav ul li a:hover {
     padding: 0;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;
 
 }
 .producto-titulo p{
@@ -254,12 +277,9 @@ nav ul li a:hover {
     padding: 0;
     text-align: center;
     margin-top: 10px;
-
-    
-
 }
 article {
-    margin: 20px;
+    margin: 10px;
     padding: 30px 10px; 
     overflow: hidden;
     width: 200px;
