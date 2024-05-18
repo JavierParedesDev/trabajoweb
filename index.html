@@ -1,70 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>GamerMarket</title>
 </head>
 <body>
+    <header>
+        <div class="container-logo">
+            <h1 class="logo-titulo"><i class="fa-solid fa-gamepad"></i>Market</h1>
+            <p>GAMER-MARKET</p>
+        </div>
+   
+        <form class="seach">
+            <button type="submit"><i class="fa-solid fa-search"></i></button>
+            <input type="text" placeholder="Buscar los mejores productos ...">
+
+            <div class="user-actions">
+                <i class="fa-regular fa-user"></i>
+                <a href="#"> Hola ! Iniciamos sesión?</a>
+            </div>
+        </form>
+       
+    </header>
     <nav>
         <ul>
-            <li><a href="#">Iniaaaacio</a></li>
+            <li><a href="#">Inicio</a></li>
             <li><a href="#">Productos</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
-    <header>
-        <h1>GamerMarket</h1>
-    </header>
+    <form class="seach-2">
+        <input type="text" placeholder="Buscar los mejores productos ...">
+        <button type="submit">Buscar</button>
+        
+    </form>
     <main>
-        <section>
+        <section class="banner">
+            <img src="img/banner.png" alt="Banner">
+            <a href="#pro"><i class="fa-solid fa-arrow-down"></i></a>   
+        </section>
+
+        <section class="producto-titulo">
+            <h1>P R O D U C T O S</h1>
+            <p>Los mejores productos para ti</p>
+        </section>
+        <section class="productos" id="pro">
             <article>
+                <img src="img/1.webp" alt="Producto 1">
                 <h3>Producto 1</h3>
                 <p>Descripción del producto 1</p>
-                <img src="img/1.webp" alt="Producto 1">
                 <p>Precio: $100</p>
                 <button>Comprar</button>
             </article>
             <article>
+                <img src="img/1.webp" alt="Producto 2">
                 <h3>Producto 2</h3>
                 <p>Descripción del producto 2</p>
-                <img src="img/1.webp" alt="Producto 2">
                 <p>Precio: $200</p>
                 <button>Comprar</button>
             </article>
             <article>
+                <img src="img/1.webp" alt="Producto 3">
                 <h3>Producto 3</h3>
                 <p>Descripción del producto 3</p>
-                <img src="img/1.webp" alt="Producto 3">
                 <p>Precio: $300</p>
                 <button>Comprar</button>
             </article>
             <article>
+                <img src="img/1.webp" alt="Producto 4">
                 <h3>Producto 4</h3>
                 <p>Descripción del producto 4</p>
-                <img src="img/1.webp" alt="Producto 4">
                 <p>Precio: $400</p>
                 <button>Comprar</button>
             </article>
             <article>
+                <img src="img/1.webp" alt="Producto 5">
                 <h3>Producto 5</h3>
                 <p>Descripción del producto 5</p>
-                <img src="img/1.webp" alt="Producto 5">
                 <p>Precio: $500</p>
                 <button>Comprar</button>
             </article>
             <article>
-                <h3>Producto 6</h3>
-                <p>Descripción del producto 6</p>
-                <img src="img/1.webp" alt="Producto 6">
-                <p>Precio: $600</p>
+                <img src="img/1.webp" alt="Producto 1">
+                <h3>Producto 1</h3>
+                <p>Descripción del producto 1</p>
+                <p>Precio: $100</p>
                 <button>Comprar</button>
+            </article>
+            <article>
+                <img src="img/1.webp" alt="Producto 2">
+                <h3>Producto 2</h3>
+                <p>Descripción del producto 2</p>
+                <p>Precio: $200</p>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="img/1.webp" alt="Producto 3">
+                <h3>Producto 3</h3>
+                <p>Descripción del producto 3</p>
+                <p>Precio: $300</p>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="img/1.webp" alt="Producto 4">
+                <h3>Producto 4</h3>
+                <p>Descripción del producto 4</p>
+                <p>Precio: $400</p>
+                <button>Comprar</button>
+            </article>
+            <article>
+                <img src="img/1.webp" alt="Producto 5">
+                <h3>Producto 5</h3>
+                <p>Descripción del producto 5</p>
+                <p>Precio: $500</p>
+                <button>Comprar</button>
+            </article>
         </section>
-        <aside>
-            <h2>Carrito</h2>
-            <p>No hay productos en el carrito</p>
-        </aside>
+
+
+    
+    </main>
+
+   
 
 
 </body>
