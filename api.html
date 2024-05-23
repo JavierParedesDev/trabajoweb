@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="api.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>VIDEOJUEGOS</title>
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <h1 class="logo-titulo"><i class="fa-solid fa-gamepad"></i>Market</h1>
+            <p>GAMER-MARKET</p>
+        </div>
+   
+        <form class="seach">
+            <div class="seach-buscar">
+               <i class="fa-solid fa-search"></i>
+                <input type="text" placeholder="Buscar los mejores productos ..." id="searchInput">
+
+            </div>
+            
+
+            <div class="user-actions">
+                <i class="fa-regular fa-user"></i>
+                <a href="#"> Hola ! Iniciamos sesión?</a>
+            </div>
+        </form>
+       
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="api.html">VideoJuegos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+           
+        </ul>
+    </nav>
+    <div class="titulo">
+        <h1>JUEG <span><i class="fa-solid fa-gamepad"></i></span> S </h1>
+        <p>Los mejores juegos para ti</p>
+
+    </div>
+
+    <div id="game-list"></div>
+    <div class="carrito-compras">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+
+    <script src="api.js"></script>
+</body>
+</html>
