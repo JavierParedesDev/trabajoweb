@@ -16,8 +16,8 @@
    
         <form class="seach">
             <div class="seach-buscar">
-                <button type="submit"><i class="fa-solid fa-search"></i></button>
-                <input type="text" placeholder="Buscar los mejores productos ...">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" placeholder="Buscar los mejores productos ..." id="searchInput">
 
             </div>
             
@@ -37,11 +37,12 @@
         </ul>
     </nav>
     <div class="sidebar">
-        <a href="#">Sillas Gamers</a>
-        <a href="#">Teclados</a>
-        <a href="#">Mouse</a>
-        <a href="#">Auriculares</a>
-        <a href="#">Monitores</a>
+        <a href="#" id="all_product">Todos los productos</a>
+        <a href="#" id="silla-gamers">Sillas Gamers</a>
+        <a href="#" id="teclado">Teclados</a>
+        <a href="#" id="mouse">Mouse</a>
+        <a href="#" id="audifonos">Auriculares</a>
+        <a href="#" id="monitores">Monitores</a>
     
     </div>
 
@@ -50,7 +51,7 @@
         <p>Los mejores productos para ti</p>
     </section>
     <section class="productos" id="pro">
-        <article>
+        <article class="productosCatalogo" id="audifonos">
             <img src="img/audifonos1.jpg" alt="Producto 1">
             <h3>Audifonos Gamer Verde FullGamming </h3>
             <p>Audifonos Gamer con microfono y conexion USB, acolchados para dar comodidad a los jugadores.</p>
@@ -59,7 +60,7 @@
                 <p>$19.990</p>
             </div>
         </article>
-        <article>
+        <article class="productosCatalogo" id="mouse">
             <img src="img/mouse2.jpg" alt="Producto 2">
             <h3>Mouse Gamer RGB Stained</h3>
             <p>Mouse para juegos competitivos con cable, RGB, 10000 DPI. </p>
@@ -68,7 +69,17 @@
                 <p>$29.990</p>
             </div>
         </article>
-        <article>
+        
+        <article class="productosCatalogo" id="silla-gamers">
+            <img src="img/silla-gamers3.jpg" alt="Producto 10">
+            <h3>Silla Gamers</h3>
+            <p>Silla Gamers con tematica azulada, acolchados para gaming</p>
+            <button>Comprar</button>
+            <div class="precio">
+                <p>$92.990</p>
+
+        </article>
+        <article class="productosCatalogo" id="teclado">
             <img src="img/teclado1.jpg" alt="Producto 3">
             <h3>Teclado Gamer HyperX RGB</h3>
             <p>Teclado con base metalica, RGB, switches red.</p>
@@ -77,7 +88,25 @@
                 <p>$17.990</p>
             </div>
         </article>
-        <article>
+        <article class="productosCatalogo" id="monitores">
+            <img src="img/monitor3.jpg" alt="Producto 8">
+            <h3>Monitor Gamer RGB</h3>
+            <p>Monitor Gamer RGB con diseño ergonomico y ligero, con capacidad de 12000 DPI.</p>
+                <button>Comprar</button>
+            <div class="precio">
+                <p>$333.990</p>
+        </article>
+        
+        <article class="productosCatalogo" id="silla-gamers">
+            <img src="img/silla-gamers4.jpg" alt="Producto 10">
+            <h3>Silla Gamers</h3>
+            <p>Silla Gamers con tematica azulada, acolchados para gaming</p>
+            <button>Comprar</button>
+            <div class="precio">
+                <p>$42.990</p>
+
+        </article>
+        <article class="productosCatalogo" id="teclado">
             <img src="img/teclado2.jpg" alt="Producto 4">
             <h3>Teclado Gamer OCELOT TKL</h3>
             <p>Teclado Gamer con luces rojas, con teclas de PBT.</p>
@@ -86,7 +115,7 @@
                 <p>$39.990</p>
             </div>
         </article>
-        <article>
+        <article class="productosCatalogo" id="audifonos">
             <img src="img/audifonos2.jpg" alt="Producto 5">
             <h3>Audifonos Gamer AttackShark</h3>
             <p>Audifonos con tematica azulada, acolchados para gaming, con microfono y conexion via usb.</p>
@@ -95,7 +124,7 @@
                 <p>$52.990</p>
             </div>
         </article>
-        <article>
+        <article class="productosCatalogo" id="mouse">
             <img src="img/mouse3.jpg" alt="Producto 1">
             <h3>Mouse Gamer ligero Horizon </h3>
             <p>Mouse Gamer RGB con diseño ergonomico y ligero, con capacidad de 12000 DPI.</p>
@@ -104,16 +133,7 @@
                 <p>$33.990</p>
             </div>
         </article>
-        <article>
-            <img src="img/teclado4.jpg" alt="Producto 2">
-            <h3>Teclado Gaming LOGITECH G PRO</h3>
-            <p>Teclado Gaming RGB LOGITECH, diseñado para jugadores competitivos. </p>
-            <button>Comprar</button>
-            <div class="precio">
-                <p>$44.990</p>
-            </div>
-        </article>
-        <article>
+        <article class="productosCatalogo" id="audifonos">
             <img src="img/audifonos3.jpg" alt="Producto 3">
             <h3>Audifonos LOGITECH G935 Gamer</h3>
             <p>Audifonos gaming Azul, con microfono de alta calidad y sonido diseñado para alto rendimiento en juegos.</p>
@@ -122,7 +142,7 @@
                 <p>$34.990</p>
             </div>
         </article>
-        <article>
+        <article class="productosCatalogo" id="teclado">
             <img src="img/teclado3.jpg" alt="Producto 4">
             <h3>Teclado gamer Redragon Fizz Pro 613</h3>
             <p>Teclado Gamer Redragon 60%, RGB, compacto para gamers.</p>
@@ -131,7 +151,7 @@
                 <p>$24.990</p>
             </div>
         </article>
-        <article>
+        <article class="productosCatalogo" id="mouse">
             <img src="img/mouse4.jpg" alt="Producto 5">
             <h3>Mouse Wireless Razer Viper pro</h3>
             <p>Mouse gamer blanco Razer Viper Pro, con conexion Wireless 2.4GHZ. </p>
@@ -139,6 +159,58 @@
             <div class="precio">
                 <p>$14.990</p>
             </div>
+        </article>
+        <article class="productosCatalogo" id="monitores">
+            <img src="img/monitor.jpg" alt="Producto 6">
+            <h3>Monitor Gamer RGB</h3>
+            <p>Monitor Gamer RGB con diseño ergonomico y ligero, con capacidad de 12000 DPI.</p>
+            <button>Comprar</button>
+            <div class="precio">
+                <p>$433.990</p>
+        </article>
+        
+        <article class="productosCatalogo" id="silla-gamers">
+            <img src="img/silla-gamers2.jpg" alt="Producto 10">
+            <h3>Silla Gamers</h3>
+            <p>Silla Gamers con tematica azulada, acolchados para gaming, con microfono y conexion via usb.</p>
+            <button>Comprar</button>
+            <div class="precio">
+                <p>$72.990</p>
+
+        </article>
+        <article class="productosCatalogo" id="teclado">
+            <img src="img/teclado4.jpg" alt="Producto 2">
+            <h3>Teclado Gaming LOGITECH G PRO</h3>
+            <p>Teclado Gaming RGB LOGITECH, diseñado para jugadores competitivos. </p>
+            <button>Comprar</button>
+            <div class="precio">
+                <p>$44.990</p>
+            </div>
+        </article>
+        <article class="productosCatalogo" id="monitores">
+            <img src="img/monitor2.jpg" alt="Producto 7">
+            <h3>Monitor Gamer RGB</h3>
+            <p>Monitor Gamer RGB con diseño ergonomico y ligero, con capacidad de 6000 DPI.</p>
+            <button>Comprar</button>
+            <div class="precio">
+                <p>$233.990</p>
+        </article>
+        <article class="productosCatalogo" id="silla-gamers">
+            <img src="img/silla-gamers.webp" alt="Producto 10">
+            <h3>Silla Gamers</h3>
+            <p>Silla Gamers con tematica azulada, acolchados para gaming, con microfono y conexion via usb.</p>
+            <button>Comprar</button>
+            <div class="precio">
+                <p>$52.990</p>
+
+        </article>
+        <article class="productosCatalogo" id="monitores">
+            <img src="img/monitor4.jpg" alt="Producto 9">
+            <h3>Monitor Gamer RGB</h3>
+            <p>Monitor Gamer RGB con diseño ergonomico y ligero, con capacidad de 12000 DPI.</p>
+                <button>Comprar</button>
+            <div class="precio">
+                <p>$333.990</p>
         </article>
     </section>
 
@@ -152,5 +224,8 @@
         <p>Todos los derechos reservados</p>
         <p>Este sitio es propiedad de GamerMarket</p>
     </footer>
+
+    <script src="script_productos.js"></script>
+    <script src="script_global.js"></script>
 </body>
 </html>

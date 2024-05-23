@@ -16,8 +16,8 @@
    
         <form class="seach">
             <div class="seach-buscar">
-                <button type="submit"><i class="fa-solid fa-search"></i></button>
-                <input type="text" placeholder="Buscar los mejores productos ...">
+               <i class="fa-solid fa-search"></i>
+                <input type="text" placeholder="Buscar los mejores productos ..." id="searchInput">
 
             </div>
             
@@ -37,8 +37,7 @@
         </ul>
     </nav>
     <form class="seach-2">
-        <input type="text" placeholder="Buscar los mejores productos ...">
-        <button type="submit">Buscar</button>
+        <input type="text" placeholder="Buscar los mejores productos ..." id="searchInput">
         
     </form>
 
@@ -53,7 +52,7 @@
             <p>Los mejores productos para ti</p>
         </section>
         <section class="productos" id="pro">
-            <article>
+            <article class="productosCatalogo" id="audifonos">
                 <img src="img/audifonos1.jpg" alt="Producto 1">
                 <h3>Audifonos Gamer Verde FullGamming </h3>
                 <p>Audifonos Gamer con microfono y conexion USB, acolchados para dar comodidad a los jugadores.</p>
@@ -62,7 +61,7 @@
                     <p>$19.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="mouse">
                 <img src="img/mouse2.jpg" alt="Producto 2">
                 <h3>Mouse Gamer RGB Stained</h3>
                 <p>Mouse para juegos competitivos con cable, RGB, 10000 DPI. </p>
@@ -71,7 +70,7 @@
                     <p>$29.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="teclado">
                 <img src="img/teclado1.jpg" alt="Producto 3">
                 <h3>Teclado Gamer HyperX RGB</h3>
                 <p>Teclado con base metalica, RGB, switches red.</p>
@@ -80,7 +79,7 @@
                     <p>$17.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="teclado">
                 <img src="img/teclado2.jpg" alt="Producto 4">
                 <h3>Teclado Gamer OCELOT TKL</h3>
                 <p>Teclado Gamer con luces rojas, con teclas de PBT.</p>
@@ -89,7 +88,7 @@
                     <p>$39.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="audifonos">
                 <img src="img/audifonos2.jpg" alt="Producto 5">
                 <h3>Audifonos Gamer AttackShark</h3>
                 <p>Audifonos con tematica azulada, acolchados para gaming, con microfono y conexion via usb.</p>
@@ -98,7 +97,7 @@
                     <p>$52.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="mause">
                 <img src="img/mouse3.jpg" alt="Producto 1">
                 <h3>Mouse Gamer ligero Horizon </h3>
                 <p>Mouse Gamer RGB con diseño ergonomico y ligero, con capacidad de 12000 DPI.</p>
@@ -107,7 +106,7 @@
                     <p>$33.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="teclado">
                 <img src="img/teclado4.jpg" alt="Producto 2">
                 <h3>Teclado Gaming LOGITECH G PRO</h3>
                 <p>Teclado Gaming RGB LOGITECH, diseñado para jugadores competitivos. </p>
@@ -116,7 +115,7 @@
                     <p>$44.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="audifonos">
                 <img src="img/audifonos3.jpg" alt="Producto 3">
                 <h3>Audifonos LOGITECH G935 Gamer</h3>
                 <p>Audifonos gaming Azul, con microfono de alta calidad y sonido diseñado para alto rendimiento en juegos.</p>
@@ -125,7 +124,7 @@
                     <p>$34.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="teclado">
                 <img src="img/teclado3.jpg" alt="Producto 4">
                 <h3>Teclado gamer Redragon Fizz Pro 613</h3>
                 <p>Teclado Gamer Redragon 60%, RGB, compacto para gamers.</p>
@@ -134,7 +133,7 @@
                     <p>$24.990</p>
                 </div>
             </article>
-            <article>
+            <article class="productosCatalogo" id="mouse">
                 <img src="img/mouse4.jpg" alt="Producto 5">
                 <h3>Mouse Wireless Razer Viper pro</h3>
                 <p>Mouse gamer blanco Razer Viper Pro, con conexion Wireless 2.4GHZ. </p>
@@ -143,6 +142,10 @@
                     <p>$14.990</p>
                 </div>
             </article>
+
+            <div class="boton-mas">
+                <a href="producto.html">Ver más</a>
+            </div>
         </section>
         
 
@@ -161,6 +164,8 @@
         <p>Todos los derechos reservados</p>
         <p>Este sitio es propiedad de GamerMarket</p>
     </footer>
+
+    <script src="script_global.js"></script>
 
 </body>
 </html>
