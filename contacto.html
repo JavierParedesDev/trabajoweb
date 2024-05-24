@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contacto_style.css">
+    <link rel="stylesheet" href="validacion_contacto.js">
     <title>Contacto</title>
 </head>
 <body>
@@ -43,24 +44,30 @@
     </div>
         <form class="form_2">
             <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
+            <input type="text" id="nombre" name="nombre">
+            <span id="error-nombre" class="error"></span><br>
+    
             <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required>
-            
-            <label for="telefono">Número de Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
-            
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            
+            <input type="text" id="apellido" name="apellido">
+            <span id="error-apellido" class="error"></span><br>
+    
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono">
+            <span id="error-telefono" class="error"></span><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="error-email" class="error"></span><br>
+    
             <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            
+            <textarea id="mensaje" name="mensaje"></textarea>
+            <span id="error-mensaje" class="error"></span><br>
+    
             <input type="submit" value="Enviar"> 
         </form>
     </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="validacion_contacto.js"></script>
 
-    
 </body>
 </html>
