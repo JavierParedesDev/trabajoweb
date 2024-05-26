@@ -24,7 +24,10 @@
 
             <div class="user-actions">
                 <i class="fa-regular fa-user"></i>
-                <a href="login.html"> Hola ! Iniciamos sesión?</a>
+                <span id="userGreeting"></span>
+                <a id="loginLink" href="login.html">Hola! Iniciamos sesión?</a>
+                
+                <a id="logoutLink" href="#" style="display:none;">Cerrar sesión</a>
             </div>
         </form>
        
@@ -215,24 +218,33 @@
         </article>
     </section>
 
+    
     <div class="carrito-compras">
+        <div id="carritoNotificacion" class="carrito-notificacion">0</div>
         <i class="fa-solid fa-cart-shopping"></i>
     </div>
 
     <div class="carrito-ventana-emergente" id="carritoVentanaEmergente">
+        
+        <h2>TU CARRITO</h2>
         <div class="carrito-contenido">
             <span class="carrito-cerrar" id="cerrarCarrito">&times;</span>
-            <h2>Carrito de Compras</h2>
-            <div id="carritoProductos"></div>
-            <button id="irAlPagoBtn" class="boton-mas">Ir al Pago</button>
+            <div class="carrito-contenido-productos">
+                <div id="carritoProductos"></div>
+            </div>
+            <button id="irAlPagoBtn" class="buttonPagar">Ir al Pago</button>
         </div>
     </div>
+    
+
     
     <footer>
         <p>Copyright © 2022 GamerMarket</p>
         <p>Todos los derechos reservados</p>
         <p>Este sitio es propiedad de GamerMarket</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="manejoSesiones.js"></script>
 
     <script src="script_productos.js"></script>
     <script src="script_global.js"></script>

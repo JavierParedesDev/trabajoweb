@@ -12,7 +12,7 @@ $(document).ready(function () {
     $('#registro-formulario').on('submit', function (event) {
         event.preventDefault(); // Prevenir el envío del formulario
 
-        // limpia los mensajes de error
+        // Limpia los mensajes de error
         $('.error-message').text('');
 
         let isValid = true;
@@ -25,6 +25,8 @@ $(document).ready(function () {
         } else {
             $("#error-nombre").text("");
         }
+
+        // Valida el apellido
         var apellido = $("#apellido").val().trim();
         if (apellido === "") {
             isValid = false;
@@ -45,7 +47,7 @@ $(document).ready(function () {
             $("#error-email").text("");
         }
 
-        //valida que la contraseña contenga 8 caracteres y sean numeros y letras por obligacion
+        // Valida la contraseña
         var contrasena = $("#contrasena").val().trim();
         if (contrasena === "") {
             isValid = false;
@@ -60,7 +62,7 @@ $(document).ready(function () {
             $("#error-contrasena").text("");
         }
 
-        // confirma la contraseña ya ingresada
+        // Confirma la contraseña
         var confirmarContrasena = $("#confirmar-contrasena").val().trim();
         if (confirmarContrasena === "") {
             isValid = false;
@@ -72,9 +74,18 @@ $(document).ready(function () {
             $("#error-confirmar-contrasena").text("");
         }
 
-
-        if (!isValid) {
-            event.preventDefault(); // Prevenir el envío del formulario si hay errores
+        if (isValid) {
+            var usuario = {
+                nombre: nombre,
+                apellido: apellido,
+                email: email,
+                contrasena: contrasena
+            };
+            localStorage.setItem(email, JSON.stringify(usuario));
+            alert("Registro exitoso.");
+            // Puedes redirigir a otra página o limpiar el formulario aquí
+            window.location.href = "login.html";
+            $('#registro-formulario')[0].reset();
         }
     });
 });
