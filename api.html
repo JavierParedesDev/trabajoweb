@@ -21,11 +21,11 @@
                 <input type="text" placeholder="Buscar los mejores productos ..." id="searchInput">
 
             </div>
-            
-
             <div class="user-actions">
                 <i class="fa-regular fa-user"></i>
-                <a href="login.html"> Hola ! Iniciamos sesión?</a>
+                <span id="userGreeting"></span>
+                <a id="loginLink" href="login.html">Hola! Iniciamos sesión?</a>
+                <a id="logoutLink" href="#" style="display:none;">Cerrar sesión</a>
             </div>
         </form>
        
@@ -47,9 +47,15 @@
 
     <div id="game-list"></div>
     <div class="carrito-compras">
+        <div id="carritoNotificacion" class="carrito-notificacion">0</div>
         <i class="fa-solid fa-cart-shopping"></i>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="script_global.js"></script>
+    <script src="manejoSesiones.js"></script>
     <script src="api.js"></script>
+    <script src="script_carrito.js"></script>
 </body>
 </html>

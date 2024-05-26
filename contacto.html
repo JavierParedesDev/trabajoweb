@@ -21,8 +21,10 @@
       <form class="seach">
         <div class="user-actions">
           <i class="fa-regular fa-user"></i>
-          <a href="login.html"> Hola ! Iniciamos sesión?</a>
-        </div>
+          <span id="userGreeting"></span>
+          <a id="loginLink" href="login.html">Hola! Iniciamos sesión?</a>
+          <a id="logoutLink" href="#" style="display:none;">Cerrar sesión</a>
+      </div>
       </form>
     </header>
     <nav>
@@ -61,6 +63,7 @@
       </form>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="manejoSesiones.js"></script>
     <script src="validacion_contacto.js"></script>
 
     <footer>
