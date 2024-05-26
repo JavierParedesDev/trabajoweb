@@ -35,8 +35,9 @@ input[type="submit"]:hover {
 }
 
 /* Estilos para el mensaje de error */
-.error {
+.error-message {
     color: red;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-top: 5px;
 }
+
