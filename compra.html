@@ -5,36 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="compra.css">
     <title>Simulación de Pago</title>
 </head>
 <body>
-    <header>
-        <div class="container-logo">
-            <h1 class="logo-titulo"><i class="fa-solid fa-gamepad"></i>Market</h1>
-            <p>GAMER-MARKET</p>
-        </div>
-   
-        <form class="seach">
-            <div class="seach-buscar">
-                <i class="fa-solid fa-search"></i>
-                <input type="text" placeholder="Buscar los mejores productos ..." id="searchInput">
-            </div>
-            <div class="user-actions">
-                <i class="fa-regular fa-user"></i>
-                <span id="userGreeting"></span>
-                <a id="loginLink" href="login.html">Hola! Iniciamos sesión?</a>
-                <a id="logoutLink" href="#" style="display:none;">Cerrar sesión</a>
-            </div>
-        </form>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="producto.html">Productos</a></li>
-            <li><a href="api.html">VideoJuegos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
     <main>
         <div class="pago-ventana-emergente" id="pagoVentanaEmergente">
             <h2>Formulario de Pago</h2>
@@ -52,36 +26,16 @@
                 <label for="nombreTarjeta">Nombre en la Tarjeta</label>
                 <input type="text" id="nombreTarjeta" name="nombreTarjeta" required>
                 
-                <button id="pagarBtn" type="submit">Pagar</button>
+                <button class="btnpagar" id="pagarBtn" type="submit">Pagar</button>
+
             </form>
             <button id="cerrarPago">&times;</button>
             <p id="totalCarrito"></p>
             <p id="precioTotal"></p>
         </div>
 
-        <div class="carrito-compras">
-            <div id="carritoNotificacion" class="carrito-notificacion">0</div>
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-        <div class="carrito-ventana-emergente" id="carritoVentanaEmergente">
-        
-            <h2>TU CARRITO</h2>
-            <div class="carrito-contenido">
-                <span class="carrito-cerrar" id="cerrarCarrito">&times;</span>
-                <div class="carrito-contenido-productos">
-                    <div id="carritoProductos"></div>
-                    <p id="precioTotal"></p>
-                </div>
-                <button id="irAlPagoBtn" class="buttonPagar">Ir al Pago</button>
-            </div>
-        </div>
+    
     </main>
-    <footer>
-        <p>Copyright © 2022 GamerMarket</p>
-        <p>Todos los derechos reservados</p>
-        <p>Este sitio es propiedad de GamerMarket</p>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
