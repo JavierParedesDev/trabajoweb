@@ -29,21 +29,29 @@ function validarFormularioPago() {
 
     // Validación básica de los campos
     if (!numeroTarjeta || !fechaVencimiento || !cvv || !nombreTarjeta) {
-        alert('Por favor, complete todos los campos.');
+        swal("Campos incompletos", "Por favor, complete todos los campos.", "warning");
         return false;
     }
 
     // Validación adicional
     const fechaRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
     if (!fechaRegex.test(fechaVencimiento)) {
-        alert('Fecha de vencimiento inválida. Use el formato MM/AA.');
+        swal("Fecha de vencimiento inválida", "Use el formato MM/AA.", "error");
         return false;
     }
     return true;
 }
 
 function simularProcesoPago() {
-    alert('Procesando pago...');
+    Swal.fire({
+        title: "Procesando pago...",
+        text: "Por favor, espere mientras se procesa su pago.",
+        icon: "info",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        showConfirmButton: false,
+        timer: 2000
+    });
 
     setTimeout(function() {
         const exito = Math.random() > 0.2;
@@ -58,10 +66,21 @@ function simularProcesoPago() {
 
 function mostrarResultadoPago(exito, numeroTransaccion) {
     if (exito) {
-        alert(`Pago exitoso. Número de transacción: ${numeroTransaccion}`);
-        window.location.href = 'confirmacion.html';
+        Swal.fire({
+            title: "Pago procesado con exito",
+            text: `Número de transacción: ${numeroTransaccion}`,
+            icon: "success"
+        }).then(() => {
+            window.location.href = 'confirmacion.html';
+        });
     } else {
-        alert('Error en el pago. Por favor, intente de nuevo.');
+        Swal.fire({
+            title: "Error al procesar el pago",
+            text: "Por favor, intente de nuevo.",
+            icon: "error"
+        }).then(() => {
+            window.location.href = 'compra.html';
+        });
     }
     pagoVentana.style.display = 'none';
 }
