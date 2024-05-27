@@ -89,7 +89,7 @@ $(document).ready(function () {
             // Ocultar el mensaje y redirigir después de 3 segundos
             setTimeout(function() {
                 $('#successMessage').fadeOut();
-                window.location.href = "index.html";
+                window.location.href = "login.html";
             }, 3000);
         }
     });
