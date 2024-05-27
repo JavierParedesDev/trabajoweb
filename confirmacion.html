@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Confirmación de Pago</title>
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <h1 class="logo-titulo"><i class="fa-solid fa-gamepad"></i>Market</h1>
+            <p>GAMER-MARKET</p>
+        </div>
+   
+        <form class="seach">
+            <div class="seach-buscar">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" placeholder="Buscar los mejores productos ..." id="searchInput">
+            </div>
+            <div class="user-actions">
+                <i class="fa-regular fa-user"></i>
+                <span id="userGreeting"></span>
+                <a id="loginLink" href="login.html">Hola! Iniciamos sesión?</a>
+                <a id="logoutLink" href="#" style="display:none;">Cerrar sesión</a>
+            </div>
+        </form>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="api.html">VideoJuegos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="confirmacion-container">
+            <h2>Pago Exitoso</h2>
+            <p>Gracias por su compra. Su pago ha sido procesado con éxito.</p>
+            <p>Número de Transacción: <span id="numeroTransaccion"></span></p>
+            <a href="index.html" class="button">Volver al Inicio</a>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © 2022 GamerMarket</p>
+        <p>Todos los derechos reservados</p>
+        <p>Este sitio es propiedad de GamerMarket</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const numeroTransaccion = urlParams.get('transaccion');
+            if (numeroTransaccion) {
+                document.getElementById('numeroTransaccion').textContent = numeroTransaccion;
+            }
+        });
+    </script>
+</body>
+</html>
