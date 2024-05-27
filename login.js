@@ -25,15 +25,28 @@ $(document).ready(function () {
             $("#error-password").text("");
         }
 
-        // Si es válido, verifica los datos en localStorage
         if (isValid) {
             var usuario = JSON.parse(localStorage.getItem(username));
             if (usuario && usuario.contrasena === password) {
-                alert("Sesión iniciada.");
+                // Mostrar el mensaje de éxito
+                $('#successMessage').fadeIn();
+
+                // Ocultar el mensaje y redirigir después de 3 segundos
+                setTimeout(function() {
+                    $('#successMessage').fadeOut();
+                    window.location.href = 'index.html';
+                }, 3000);
+
+                // Guardar el usuario como logueado
                 localStorage.setItem('loggedInUser', JSON.stringify(usuario));
-                window.location.href = 'index.html'; // Redirigir al usuario a la página principal
             } else {
-                alert("Usuario no encontrado o contraseña incorrecta.");
+                // Mostrar el mensaje de error en el modal
+                $('#erroriniciar').fadeIn();
+
+                // Ocultar el modal después de 3 segundos
+                setTimeout(function() {
+                    $('#erroriniciar').fadeOut();
+                }, 3000);
             }
         }
     });

@@ -82,10 +82,15 @@ $(document).ready(function () {
                 contrasena: contrasena
             };
             localStorage.setItem(email, JSON.stringify(usuario));
-            alert("Registro exitoso.");
-            // Puedes redirigir a otra página o limpiar el formulario aquí
-            window.location.href = "login.html";
-            $('#registro-formulario')[0].reset();
+            
+            // Mostrar el mensaje de éxito
+            $('#successMessage').fadeIn();
+
+            // Ocultar el mensaje y redirigir después de 3 segundos
+            setTimeout(function() {
+                $('#successMessage').fadeOut();
+                window.location.href = "index.html";
+            }, 3000);
         }
     });
 });
