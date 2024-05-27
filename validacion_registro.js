@@ -83,10 +83,8 @@ $(document).ready(function () {
             };
             localStorage.setItem(email, JSON.stringify(usuario));
             
-            // Mostrar el mensaje de éxito
             $('#successMessage').fadeIn();
 
-            // Ocultar el mensaje y redirigir después de 3 segundos
             setTimeout(function() {
                 $('#successMessage').fadeOut();
                 window.location.href = "login.html";
