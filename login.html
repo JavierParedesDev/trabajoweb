@@ -11,8 +11,8 @@
     <div class="div_c">
         <h1>Iniciamos sesión</h1>
         <form id="login-form" method="post">
-            <label><i class="fa-solid fa-user"></i> Nombre de usuario</label>
-            <input type="text" placeholder="Nombre de usuario" id="username" name="username">
+            <label><i class="fa-solid fa-user"></i> Email Usuario</label>
+            <input type="text" placeholder="Email" id="username" name="username">
             <span id="error-username" class="error-message"></span><br><br>
             
             <label><i class="fa-solid fa-lock"></i> Contraseña</label>
@@ -26,6 +26,17 @@
         
         <a href="index.html">Volver al Inicio</a>
     </div>
+        <div id="successMessage" class="sesion-iniciada">
+        ¡Sesion Iniciada exitosamente!
+    </div>
+    <div id="erroriniciar" class="error-iniciar">
+        <div class="modal-content">
+            <div id="errorMensaje" class="mensaje-error">
+                Usuario no encontrado o contraseña incorrecta.
+            </div>
+        </div>
+    </div>
+
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="login.js"></script>
