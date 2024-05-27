@@ -55,7 +55,25 @@
                 <button id="pagarBtn" type="submit">Pagar</button>
             </form>
             <button id="cerrarPago">&times;</button>
-            <div id="precioTotalMostrado"></div>
+            <p id="totalCarrito"></p>
+            <p id="precioTotal"></p>
+        </div>
+
+        <div class="carrito-compras">
+            <div id="carritoNotificacion" class="carrito-notificacion">0</div>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        <div class="carrito-ventana-emergente" id="carritoVentanaEmergente">
+        
+            <h2>TU CARRITO</h2>
+            <div class="carrito-contenido">
+                <span class="carrito-cerrar" id="cerrarCarrito">&times;</span>
+                <div class="carrito-contenido-productos">
+                    <div id="carritoProductos"></div>
+                    <p id="precioTotal"></p>
+                </div>
+                <button id="irAlPagoBtn" class="buttonPagar">Ir al Pago</button>
+            </div>
         </div>
     </main>
     <footer>
@@ -63,6 +81,10 @@
         <p>Todos los derechos reservados</p>
         <p>Este sitio es propiedad de GamerMarket</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script src="script_carrito.js"></script>
     <script src="script_compra.js"></script>
+
 </body>
 </html>

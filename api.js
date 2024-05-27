@@ -36,7 +36,7 @@ const apiKey = '5d8268fe9e5d4bf4a755e5555211d68e';
                     <p>Platforms: ${game.platforms.map(platform => platform.platform.name).join(', ')}</p>
                     <p>Genres: ${game.genres.map(genre => genre.name).join(', ')}</p>
                     <p>Rating: ${game.rating}</p>
-                    <p>Valor: ${precioFormateado }</p>
+                    <p>Valor: ${"$"+precioFormateado }</p>
                     <button>Comprar</button>
                 `;
                 gameListContainer.appendChild(gameItem);

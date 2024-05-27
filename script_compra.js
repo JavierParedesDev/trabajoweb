@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     pagoVentana.style.display = 'block';
     const precioTotalCampo = document.getElementById('precioTotal');
     const precioTotalElemento = document.getElementById('precioTotalMostrado');
-    precioTotalElemento.textContent = `$${parseFloat(precioTotalCampo.value).toLocaleString('es-CL')}`;
 });
 
 cerrarPagoBtn.addEventListener('click', function() {

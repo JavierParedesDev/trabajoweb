@@ -16,8 +16,6 @@ function cerrarCarrito() {
 // Asegurarse de que el carrito esté cerrado al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
     cerrarCarrito();
-    actualizarNotificacionCarrito();
-    actualizarTotalCarrito();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -63,6 +61,7 @@ function agregarAlCarrito(producto) {
         carritoProductos.removeChild(productoDiv);
         actualizarNotificacionCarrito();
         actualizarTotalCarrito();
+        
     });
 
     productoDiv.appendChild(imagenProducto);
@@ -118,13 +117,26 @@ function actualizarTotalCarrito() {
     });
     totalCarrito.textContent = `Total: $${total.toLocaleString('es-CL')}`;
     const precioTotalCampo = document.getElementById('precioTotal');
-    precioTotalCampo.value = total;
+
+    localStorage.setItem('precioTotal', total);
+
     
+}
+
+function obtenerPrecioTotal() {
+    return localStorage.getItem('precioTotal') || 0;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     const cantidadProductosGuardada = obtenerCantidadProductosEnCarrito();
     const carritoNotificacion = document.getElementById('carritoNotificacion');
+    const precioTotal = obtenerPrecioTotal();
+    const totalCarrito = document.getElementById('totalCarrito');
+
     carritoNotificacion.textContent = cantidadProductosGuardada;
-    actualizarTotalCarrito();
+    totalCarrito.textContent = `Total: $${precioTotal.toLocaleString('es-CL')}`;
+
+    console.log(precioTotal);
+ 
+    
 });
