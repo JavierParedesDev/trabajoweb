@@ -1,4 +1,3 @@
-
 const pagoVentana = document.getElementById('pagoVentanaEmergente');
 const formularioPago = document.getElementById('formularioPago');
 const cerrarPagoBtn = document.getElementById('cerrarPago');
@@ -43,7 +42,12 @@ function validarFormularioPago() {
     if (!fechaRegex.test(fechaVencimiento)) {
         Swal.fire("Fecha de vencimiento inválida", "Use el formato MM/AA.", "error");
         return false;
+    }   const nombreTarjetaRegex = /^[a-zA-Z ]+$/; // Permite letras mayúsculas, minúsculas y espacios en blanco
+    if (!nombreTarjetaRegex.test(nombreTarjeta)) {
+        Swal.fire("Nombre de tarjeta inválido", "Ingrese un nombre de tarjeta válido.", "error");
+        return false;
     }
+
     return true;
 }
 
@@ -73,6 +77,7 @@ function mostrarResultadoPago(exito, numeroTransaccion) {
     if (exito) {
         Swal.fire({
             title: "Pago procesado con éxito",
+            text: `Número de transacción: ${numeroTransaccion}`,
             icon: "success"
         }).then(() => {
             window.location.href = 'confirmacion.html ';
