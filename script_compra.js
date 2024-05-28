@@ -1,3 +1,4 @@
+
 const pagoVentana = document.getElementById('pagoVentanaEmergente');
 const formularioPago = document.getElementById('formularioPago');
 const cerrarPagoBtn = document.getElementById('cerrarPago');
@@ -89,3 +90,26 @@ function mostrarResultadoPago(exito, numeroTransaccion) {
     pagoVentana.style.display = 'none';
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const precioTotal = localStorage.getItem('precioTotal');
+    const precioTotalElemento = document.getElementById('precioTotalMostrado');
+    const pagarBtn = document.getElementById('pagarBtn');
+
+    if (precioTotal) {
+        precioTotalElemento.textContent = `Total a pagar: $${parseFloat(precioTotal).toLocaleString('es-CL')}`;
+        pagarBtn.textContent = `Pagar $${parseFloat(precioTotal).toLocaleString('es-CL')}`;
+    } else {
+        precioTotalElemento.textContent = 'Total a pagar: $0';
+        pagarBtn.textContent = 'Pagar $0';
+    }
+
+    pagoVentana.style.display = 'block';
+});
+
+function actualizarTotalEnBoton(total) {
+    const pagarBtn = document.getElementById('pagarBtn');
+    pagarBtn.textContent = `Pagar $${parseFloat(total).toLocaleString('es-CL')}`;
+}
+// Suponiendo que tengas una función para obtener el nuevo total después de cambios en el carrito
+const nuevoTotal = obtenerNuevoTotal();
+actualizarTotalEnBoton(nuevoTotal);

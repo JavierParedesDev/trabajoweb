@@ -1,7 +1,8 @@
+
 .pago-ventana-emergente{
     width: 30%;
     margin: 0 auto;
-    padding: 20px 50px;
+    padding: 60px 70px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--color-secondary);
@@ -32,8 +33,32 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #45a049;
 }
+.form-group {
+    display: flex;
+    gap: 20px; /* Espacio entre los grupos de input */
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
 
 .btnpagar{
     width: 100%;
-    height: 30px;
+    height: 40px;
+    background-color: #45a049;
+}
+
+.btncancelar{
+    width: 100%;
+    height: 40px;
+    background-color: red;
+}
+
+.btnpagar:hover {
+    background-color: #368339;
+}
+.btncancelar:hover {
+    background-color: rgb(199, 4, 4);
 }

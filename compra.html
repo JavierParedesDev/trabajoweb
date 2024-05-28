@@ -17,20 +17,31 @@
                 <label for="numeroTarjeta">Número de Tarjeta</label>
                 <input type="text" id="numeroTarjeta" name="numeroTarjeta" required>
                 
-                <label for="fechaVencimiento">Fecha de Vencimiento</label>
-                <input type="text" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/AA" required>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        <label for="fechaVencimiento">Fecha de Vencimiento</label>
+                        <input type="text" id="fechaVencimiento" name="fechaVencimiento" placeholder="MM/AA" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" required>
+                    </div>
+                </div>
                 
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" required>
+                <label for="nombreTarjeta">Nombre Titular</label>
+                <input type="text" id="nombreTarjeta" name="nombreTitular" required>
                 
-                <label for="nombreTarjeta">Nombre en la Tarjeta</label>
-                <input type="text" id="nombreTarjeta" name="nombreTarjeta" required>
+                <div class="payment-section">
+                    <span id="totalCarrito"></span>
+                    <span id="precioTotalMostrado"></span>
+                    <button class="btnpagar" id="pagarBtn" type="submit">Pagar</button>
+                </div>
                 
-                <button class="btnpagar" id="pagarBtn" type="submit">Pagar</button>
+                <button class="btncancelar" id="cerrarPago">Cancelar</button>
             </form>
-            <button id="cerrarPago">Cancelar</button>
-            <p id="totalCarrito"></p>
-            <p id="precioTotalMostrado"></p> <!-- Elemento para mostrar el total -->
+         
+            
         </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
