@@ -73,7 +73,6 @@ function mostrarResultadoPago(exito, numeroTransaccion) {
     if (exito) {
         Swal.fire({
             title: "Pago procesado con éxito",
-            text: `Número de transacción: ${numeroTransaccion}`,
             icon: "success"
         }).then(() => {
             window.location.href = 'confirmacion.html ';

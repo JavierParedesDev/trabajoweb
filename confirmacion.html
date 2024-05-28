@@ -20,11 +20,9 @@
    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const numeroTransaccion = urlParams.get('transaccion');
-            if (numeroTransaccion) {
-                document.getElementById('numeroTransaccion').textContent = numeroTransaccion;
-            }
+            const numeroTransaccionRandom = Math.random() > 0.2 ? Math.floor(Math.random() * 10000000) : Math.floor(Math.random() * 100000000);
+            const numeroTransaccion = document.getElementById('numeroTransaccion');
+            numeroTransaccion.textContent = numeroTransaccionRandom;
         });
     </script>
 </body>
